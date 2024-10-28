@@ -1,0 +1,19 @@
+<% content_for :title, "Editing friend" %>
+
+<h1>Editing friend</h1>
+
+<br>
+
+<%= render "form", friend: @friend %>
+
+<br>
+
+<div class="d-inline-flex gap-2" role="group">
+  <%= link_to "Show this friend", @friend, class:"btn btn-secondary" %>
+  <%= button_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+  <%= link_to "Back to friends", friends_path, class:"btn btn-dark" %>
+</div>
+
+<br>
+<br>
+<br>
